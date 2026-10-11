@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="navy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>整備結果説明 実績</title>
+<style>
+:root{--bg:#eef1f4;--panel:#fff;--ink:#1b2733;--mute:#66737f;--line:#dde3e9;--m1:#0f766e;--m2:#b45309;--m3:#4338ca;--btn:#fff;--red:#d92d20;--hink:#1b2733;--hmute:#66737f;--btnink:#1b2733;--bline:#dde3e9;--sel:#1b2733;--selink:#eef1f4;--hm1:#0f766e;--hm2:#b45309;--hm3:#4338ca}
+:root[data-theme="navy"]{--bg:#26446b;--panel:#f1f5fa;--ink:#1b2733;--mute:#5b6875;--line:#d3dce6;--hink:#f1f5fa;--hmute:#b9c9dc;--btn:#35557f;--btnink:#f1f5fa;--bline:#4a6a94;--sel:#f1f5fa;--selink:#26446b;--m1:#0f766e;--m2:#b45309;--m3:#4338ca;--hm1:#5eead4;--hm2:#fcd34d;--hm3:#c7bbff;--red:#d92d20}
+:root[data-theme="dark"]{--bg:#10161c;--panel:#1a232c;--ink:#e8eef3;--mute:#93a1ad;--line:#2b3742;--m1:#2dd4bf;--m2:#fbbf24;--m3:#a5b4fc;--btn:#1a232c;--red:#ff7b72;--hink:#e8eef3;--hmute:#93a1ad;--btnink:#e8eef3;--bline:#2b3742;--sel:#e8eef3;--selink:#10161c;--hm1:#2dd4bf;--hm2:#fbbf24;--hm3:#a5b4fc}
+@media (prefers-color-scheme:dark){:root[data-theme="auto"]{--bg:#10161c;--panel:#1a232c;--ink:#e8eef3;--mute:#93a1ad;--line:#2b3742;--m1:#2dd4bf;--m2:#fbbf24;--m3:#a5b4fc;--btn:#1a232c;--red:#ff7b72;--hink:#e8eef3;--hmute:#93a1ad;--btnink:#e8eef3;--bline:#2b3742;--sel:#e8eef3;--selink:#10161c;--hm1:#2dd4bf;--hm2:#fbbf24;--hm3:#a5b4fc}}
+html{height:100%}
+body{margin:0;min-height:100%;overflow-x:hidden;box-sizing:border-box;background:var(--bg);color:var(--hink);font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Yu Gothic","Meiryo","Noto Sans JP",sans-serif}
+#stage{--rh:38px;width:1920px;box-sizing:border-box;padding:16px 40px 16px;display:flex;flex-direction:column;gap:24px}
+.top{display:flex;align-items:center;gap:28px;height:84px;padding:12px 0 0;flex:none}
+.ttl{width:440px}
+h1{margin:0;font-size:42px;font-weight:700;line-height:1.15}
+.sub{font-size:18px;color:var(--hmute);margin-top:2px}
+.months{display:flex;gap:8px;flex:1;justify-content:center}
+.months button{font:inherit;font-size:21px;font-weight:600;min-width:70px;height:52px;border:1px solid var(--bline);background:var(--btn);color:var(--btnink);border-radius:10px;cursor:pointer;padding:0 12px}
+.months button.tot{min-width:112px;border-width:2px}
+.months button.gap{margin-left:16px}
+.months button[aria-pressed="true"]{background:var(--sel);color:var(--selink);border-color:var(--sel)}
+.months button:focus-visible{outline:3px solid var(--m3);outline-offset:2px}
+.sum{display:flex;gap:22px;width:460px;justify-content:flex-end}
+.sum div{border-top:4px solid var(--c);padding-top:6px;text-align:right}
+.sum b{display:block;font-size:34px;line-height:1.1;font-variant-numeric:tabular-nums}
+.sum span{font-size:14px;color:var(--hmute)}
+.m1{--c:var(--m1)}.m2{--c:var(--m2)}.m3{--c:var(--m3)}.sum .m1{--c:var(--hm1)}.sum .m2{--c:var(--hm2)}.sum .m3{--c:var(--hm3)}
+.rows{display:grid;gap:20px}
+.r1{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;min-height:0}
+.r2{display:flex;justify-content:center;gap:20px;min-height:0}
+.card{container-type:inline-size;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 20px;display:flex;flex-direction:column;min-width:0;min-height:0;overflow:hidden}
+.r2 .card{flex:1 1 0;max-width:calc((100% - 40px)/3)}
+.ch{display:flex;justify-content:space-between;align-items:baseline;height:40px;flex:none}
+.ch h2{margin:0;font-size:30px;font-weight:700}
+.ch span{color:var(--mute);font-size:16px}
+.ch em{font-style:normal;font-size:14px;border:1px solid var(--line);border-radius:6px;padding:2px 8px;margin-right:10px}
+table{width:100%;border-collapse:collapse;table-layout:fixed;font-variant-numeric:tabular-nums}
+th{font-size:calc(clamp(13px,2.5cqw,16px)*var(--k,1));font-weight:600;height:44px;line-height:1.2;text-align:center;vertical-align:bottom;padding:0 4px 6px;border-bottom:2px solid var(--line);color:var(--c)}
+th:first-child,td:first-child{text-align:left}
+td{height:var(--rh);padding:0 4px;text-align:center;line-height:1.1;font-size:calc(clamp(21px,4.8cqw,28px)*var(--k,1));border-bottom:1px solid var(--line)}
+td:first-child{padding-left:8px;font-size:calc(clamp(19px,4.1cqw,25px)*var(--k,1));white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+td.z{color:var(--mute)}
+td.rz{color:var(--red);font-weight:700}
+.ft{margin-top:auto;border-top:2px solid var(--line)}
+.ft td{height:44px;font-size:clamp(24px,5cqw,30px);font-weight:700;border-bottom:0}
+.ft td:first-child{font-size:17px;font-weight:600;color:var(--mute)}
+.nores{font-size:14px;color:var(--red);border:1px solid var(--red);border-radius:6px;padding:2px 8px;margin-right:10px}
+
+.card{min-height:412px;overflow:visible}
+.fy{display:flex;flex-direction:column;gap:14px}
+.fy>h2{margin:0;font-size:42px;font-weight:700;line-height:1.15;display:flex;align-items:baseline;justify-content:space-between}
+.fy>h2 small{font-size:20px;font-weight:400;color:var(--hmute)}
+.fyg{--fc:260px 340px repeat(3,1fr);display:flex;flex-direction:column;gap:12px}
+
+.fh{display:grid;grid-template-columns:var(--fc);padding:0 29px;font-size:34px;font-weight:700;line-height:1.3;color:var(--hmute);margin-bottom:-4px}
+.fh span{text-align:center}.fh span:nth-child(-n+2){text-align:left}
+.fh .m1{color:var(--hm1)}.fh .m2{color:var(--hm2)}.fh .m3{color:var(--hm3)}
+.wc{display:grid;grid-template-columns:var(--fc);align-items:stretch;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:6px 28px}
+.wc h3{grid-column:1;grid-row:1 / span var(--n);align-self:center;margin:0;font-size:34px;font-weight:700}
+.wc .c{display:flex;align-items:center;justify-content:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:40px;font-weight:600;text-align:center;line-height:1.2}
+.wc .c.nm{grid-column:2;justify-content:flex-start;font-size:34px}
+.wc .c.m1{grid-column:3}.wc .c.m2{grid-column:4}.wc .c.m3{grid-column:5}
+.wc .c.z{color:var(--mute);font-weight:400}
+.wc .c.l{border-bottom:0}
+.fe{padding:12px 0;color:var(--hmute);font-size:24px}
+</style>
+</head>
+<body>
+<main id="stage">
+  <header class="top">
+    <div class="ttl"><h1>整備結果説明 実績</h1><div class="sub" id="sub"></div></div>
+    <nav class="months" id="months" aria-label="表示期間の切り替え"></nav>
+    <div class="sum" id="sum"></div>
+  </header>
+  <div class="rows"><div class="r1" id="r1"></div><div class="r2" id="r2"></div></div>
+</main>
+<script>
+const D=[{"l":"4月","k":"m","sub":"2026年度 上期 4月","s":[{"n":"石川店","none":false,"p":[["山田 樹",60,0,44],["佐久間 ケイン",33,0,1],["村谷 隆行",20,0,0],["戸来 涼二",5,0,0],["三田 雄司",1,0,0],["斉藤 幸司",0,0,0],["長谷川 楓翔",0,0,0]]},{"n":"亀田本町店","none":false,"p":[["中野 湧太",14,3,41],["河村 輝",7,0,7],["船板 祐希",1,0,1],["大山 貢侑",0,3,44],["石田 泰二",0,0,0]]},{"n":"神山店","none":false,"p":[["川道 蒼斗",45,3,57],["船板 祐希",19,1,32],["宮本 樹和",16,2,56],["大野 剛",16,2,50],["大淺 孝弘",14,3,53],["大久保 愛斗",0,0,0]]},{"n":"森店","none":false,"p":[["釜澤 寿孝",27,1,56],["山坂 孝弘",21,7,36],["森内 蓮太",15,8,31]]},{"n":"八雲店","none":false,"p":[["堀 皓稀",27,27,27],["西川 司",27,24,21],["塚本 博文",19,19,19]],"note":"7月で閉鎖"},{"n":"北桧山店","none":false,"p":[["五十嵐 健一",2,0,5],["尾形 敏幸",2,0,0]]},{"n":"江差店","none":false,"p":[["草間 虹人",7,0,22],["福島 直樹",2,0,5]]}]},{"l":"5月","k":"m","sub":"2026年度 上期 5月","s":[{"n":"石川店","none":false,"p":[["山田 樹",15,0,3],["佐久間 ケイン",15,1,0],["戸来 涼二",12,1,0],["村谷 隆行",5,1,0],["三田 雄司",0,0,0],["斉藤 幸司",0,0,0],["長谷川 楓翔",0,0,0]]},{"n":"亀田本町店","none":false,"p":[["中野 湧太",9,2,6],["河村 輝",4,1,4],["大山 貢侑",0,0,38],["石田 泰二",0,0,0],["船板 祐希",0,0,0]]},{"n":"神山店","none":false,"p":[["川道 蒼斗",67,1,76],["宮本 樹和",29,2,36],["大野 剛",22,2,34],["大淺 孝弘",21,2,35],["大久保 愛斗",0,0,0]]},{"n":"森店","none":false,"p":[["山坂 孝弘",16,7,18],["森内 蓮太",15,6,16],["釜澤 寿孝",13,3,26],["西川 司",0,0,0]]},{"n":"八雲店","none":false,"p":[["堀 皓稀",5,5,5],["塚本 博文",3,3,3]],"note":"7月で閉鎖"},{"n":"北桧山店","none":false,"p":[["尾形 敏幸",3,1,0],["五十嵐 健一",1,0,3]]},{"n":"江差店","none":false,"p":[["草間 虹人",5,1,1],["福島 直樹",0,0,0]]}]},{"l":"6月","k":"m","sub":"2026年度 上期 6月","s":[{"n":"石川店","none":false,"p":[["山田 樹",11,1,0],["村谷 隆行",10,0,0],["三田 雄司",0,0,0],["斉藤 幸司",0,0,0],["堀 皓稀",0,0,0],["戸来 涼二",0,0,0],["長谷川 楓翔",0,0,0]]},{"n":"亀田本町店","none":false,"p":[["中野 湧太",6,0,5],["河村 輝",2,0,2],["大山 貢侑",0,1,14],["石田 泰二",0,0,0],["船板 祐希",0,0,0]]},{"n":"神山店","none":false,"p":[["川道 蒼斗",55,1,61],["大淺 孝弘",5,1,33],["宮本 樹和",5,2,16],["大野 剛",4,2,18],["大久保 愛斗",0,0,0]]},{"n":"森店","none":false,"p":[["山坂 孝弘",24,14,25],["森内 蓮太",17,12,18],["釜澤 寿孝",11,4,21],["佐久間 ケイン",0,0,0]]},{"n":"八雲店","none":false,"p":[["西川 司",22,21,18],["塚本 博文",5,4,5]],"note":"7月で閉鎖"},{"n":"北桧山店","none":false,"p":[["五十嵐 健一",2,2,1],["尾形 敏幸",2,0,0]]},{"n":"江差店","none":false,"p":[["草間 虹人",7,0,0],["福島 直樹",5,0,0]]}]},{"l":"7月","k":"m","sub":"2026年度 上期 7月","s":[{"n":"石川店","none":false,"p":[["村谷 隆行",13,1,1],["佐久間 ケイン",11,0,2],["山田 樹",10,1,2],["戸来 涼二",5,2,6],["川村 翔",0,18,0],["三田 雄司",0,0,0],["斉藤 幸司",0,0,0],["長谷川 楓翔",0,0,0]]},{"n":"亀田本町店","none":false,"p":[["中野 湧太",8,3,9],["河村 輝",1,0,1],["船板 祐希",1,0,0],["大山 貢侑",0,0,4],["石田 泰二",0,0,0]]},{"n":"神山店","none":false,"p":[["川道 蒼斗",50,3,45],["大淺 孝弘",11,2,39],["宮本 樹和",7,1,14],["大野 剛",6,1,11],["大久保 愛斗",0,0,0]]},{"n":"森店","none":false,"p":[["山坂 孝弘",24,10,24],["釜澤 寿孝",20,5,37],["森内 蓮太",10,6,12]]},{"n":"八雲店","none":false,"p":[["西川 司",10,6,4],["塚本 博文",1,1,1],["堀 皓稀",0,1,1]],"note":"7月で閉鎖"},{"n":"北桧山店","none":false,"p":[["尾形 敏幸",3,1,0],["五十嵐 健一",1,2,2]]},{"n":"江差店","none":false,"p":[["草間 虹人",9,6,6],["福島 直樹",4,4,5]]}]},{"l":"8月","k":"m","sub":"2026年度 上期 8月","s":[{"n":"石川店","none":false,"p":[["村谷 隆行",27,1,2],["山田 樹",11,0,2],["三田 雄司",1,0,0],["堀 皓稀",0,43,43],["斉藤 幸司",0,0,0],["戸来 涼二",0,0,0],["長谷川 楓翔",0,0,0]]},{"n":"亀田本町店","none":true,"p":[["石田 泰二",0,0,0],["釜澤 寿孝",0,0,0],["船板 祐希",0,0,0],["中野 湧太",0,0,0]]},{"n":"神山店","none":false,"p":[["川道 蒼斗",40,1,39],["大野 剛",13,6,22],["宮本 樹和",9,3,17],["山坂 孝弘",8,1,36],["大久保 愛斗",0,0,0]]},{"n":"森店","none":false,"p":[["佐久間 ケイン",10,2,10],["森内 蓮太",8,11,16],["河村 輝",7,4,5],["西川 司",2,2,2],["山坂 孝弘",1,0,1]]},{"n":"北桧山店","none":false,"p":[["尾形 敏幸",2,0,0],["五十嵐 健一",1,2,8]]},{"n":"江差店","none":false,"p":[["草間 虹人",7,4,0],["福島 直樹",3,5,2],["塚本 博文",2,3,0]]}]},{"l":"9月","k":"m","sub":"2026年度 上期 9月","s":[{"n":"石川店","none":false,"p":[["山田 樹",23,1,6],["村谷 隆行",17,1,0],["戸来 涼二",3,0,6],["堀 皓稀",0,64,64],["三田 雄司",0,0,0],["斉藤 幸司",0,0,0],["長谷川 楓翔",0,0,0]]},{"n":"亀田本町店","none":true,"p":[["石田 泰二",0,0,0],["釜澤 寿孝",0,0,0],["船板 祐希",0,0,0],["中野 湧太",0,0,0]]},{"n":"神山店","none":false,"p":[["川道 蒼斗",41,4,41],["山坂 孝弘",6,0,29],["大野 剛",3,1,18],["宮本 樹和",3,0,9],["大久保 愛斗",0,0,0]]},{"n":"森店","none":false,"p":[["佐久間 ケイン",24,6,28],["河村 輝",14,7,18],["森内 蓮太",6,6,17],["西川 司",2,2,1]]},{"n":"北桧山店","none":false,"p":[["尾形 敏幸",2,0,0],["五十嵐 健一",1,0,7]]},{"n":"江差店","none":false,"p":[["草間 虹人",9,10,3],["福島 直樹",0,2,1],["塚本 博文",0,1,0]]}]},{"l":"上期合計","k":"h","sub":"2026年度 上期(4〜9月)合計","s":[{"n":"石川店","none":false,"p":[["山田 樹",130,3,57],["村谷 隆行",92,4,3],["佐久間 ケイン",59,1,3],["戸来 涼二",25,3,12],["三田 雄司",2,0,0],["堀 皓稀",0,107,107],["川村 翔",0,18,0],["斉藤 幸司",0,0,0],["長谷川 楓翔",0,0,0]]},{"n":"亀田本町店","none":false,"p":[["中野 湧太",37,8,61],["河村 輝",14,1,14],["船板 祐希",2,0,1],["大山 貢侑",0,4,100],["石田 泰二",0,0,0],["釜澤 寿孝",0,0,0]]},{"n":"神山店","none":false,"p":[["川道 蒼斗",298,13,319],["宮本 樹和",69,10,148],["大野 剛",64,14,153],["大淺 孝弘",51,8,160],["船板 祐希",19,1,32],["山坂 孝弘",14,1,65],["大久保 愛斗",0,0,0]]},{"n":"森店","none":false,"p":[["山坂 孝弘",86,38,104],["森内 蓮太",71,49,110],["釜澤 寿孝",71,13,140],["佐久間 ケイン",34,8,38],["河村 輝",21,11,23],["西川 司",4,4,3]]},{"n":"八雲店","none":false,"p":[["西川 司",59,51,43],["堀 皓稀",32,33,33],["塚本 博文",28,27,28]],"note":"7月で閉鎖"},{"n":"北桧山店","none":false,"p":[["尾形 敏幸",14,2,0],["五十嵐 健一",8,6,26]]},{"n":"江差店","none":false,"p":[["草間 虹人",44,21,32],["福島 直樹",14,11,13],["塚本 博文",2,4,0]]}]},{"l":"10月","k":"m","sub":"2026年度 下期 10月","s":[{"n":"石川店","none":false,"p":[["村谷 隆行",5,1,0],["山田 樹",4,1,2],["三田 雄司",0,0,0],["斉藤 幸司",0,0,0],["堀 皓稀",0,0,0],["戸来 涼二",0,0,0],["長谷川 楓翔",0,0,0]]},{"n":"亀田本町店","none":false,"p":[["中野 湧太",2,0,0],["船板 祐希",1,0,0],["石田 泰二",0,0,0],["釜澤 寿孝",0,0,0]]},{"n":"神山店","none":false,"p":[["川道 蒼斗",4,0,4],["大野 剛",1,1,1],["山坂 孝弘",1,0,1],["宮本 樹和",0,0,1],["大久保 愛斗",0,0,0]]},{"n":"森店","none":false,"p":[["佐久間 ケイン",7,2,4],["河村 輝",3,1,4],["森内 蓮太",2,1,5],["西川 司",0,0,0]]},{"n":"北桧山店","none":false,"p":[["五十嵐 健一",0,0,2],["尾形 敏幸",0,0,0]]},{"n":"江差店","none":false,"p":[["草間 虹人",2,3,0],["福島 直樹",1,1,1],["塚本 博文",1,0,0]]}],"g":true},{"l":"下期合計","k":"h","sub":"2026年度 下期(10〜3月)合計 ※10月までの実績","s":[{"n":"石川店","none":false,"p":[["村谷 隆行",5,1,0],["山田 樹",4,1,2],["三田 雄司",0,0,0],["斉藤 幸司",0,0,0],["堀 皓稀",0,0,0],["戸来 涼二",0,0,0],["長谷川 楓翔",0,0,0]]},{"n":"亀田本町店","none":false,"p":[["中野 湧太",2,0,0],["船板 祐希",1,0,0],["石田 泰二",0,0,0],["釜澤 寿孝",0,0,0]]},{"n":"神山店","none":false,"p":[["川道 蒼斗",4,0,4],["大野 剛",1,1,1],["山坂 孝弘",1,0,1],["宮本 樹和",0,0,1],["大久保 愛斗",0,0,0]]},{"n":"森店","none":false,"p":[["佐久間 ケイン",7,2,4],["河村 輝",3,1,4],["森内 蓮太",2,1,5],["西川 司",0,0,0]]},{"n":"北桧山店","none":false,"p":[["五十嵐 健一",0,0,2],["尾形 敏幸",0,0,0]]},{"n":"江差店","none":false,"p":[["草間 虹人",2,3,0],["福島 直樹",1,1,1],["塚本 博文",1,0,0]]}]}];
+const RZ_EACH=false;
+const MET=[["整備結果説明","m1"],["下見せ","m2"],["タイヤチェック","m3"]];
+const $=s=>document.querySelector(s);
+const sum=(a,i)=>a.reduce((t,r)=>t+r[i],0);
+const CG='<colgroup><col style="width:34%"><col style="width:22%"><col style="width:22%"><col style="width:22%"></colgroup>';
+
+function card(s){
+  const tag=(s.none?'<b class="nores">実績なし</b>':"")+(s.note?`<em>${s.note}</em>`:"");
+  const tot=[1,2,3].map(i=>sum(s.p,i));
+  const rows=s.p.map(r=>{const z=r[1]+r[2]+r[3]===0;
+    return `<tr><td>${r[0]}</td>`+[1,2,3].map(i=>`<td class="${r[i]?"":(z||RZ_EACH)?"rz":"z"}">${r[i]}</td>`).join("")+"</tr>"}).join("");
+  return `<section class="card"><div class="ch"><h2>${s.n}</h2><span>${tag}${s.p.length}名</span></div>
+  <table>${CG}<thead><tr><th></th><th class="m1">整備結果<br>説明</th><th class="m2">下見せ</th><th class="m3">タイヤ<br>チェック</th></tr></thead><tbody>${rows}</tbody></table>
+  <table class="ft">${CG}<tbody><tr><td>店舗計</td>${tot.map(v=>`<td>${v}</td>`).join("")}</tr></tbody></table></section>`;
+}
+
+function show(i){
+  const v=D[i], all=v.s.flatMap(s=>s.p);
+  const maxRows=Math.max(1,...v.s.map(s=>s.p.length));
+  const rh=38;
+  $("#stage").style.setProperty("--rh",rh+"px");
+  $("#stage").style.setProperty("--k",rh<34?"0.8":"1");
+  document.querySelectorAll("#months button").forEach((b,k)=>b.setAttribute("aria-pressed",k===i));
+  $("#sub").textContent=v.sub;
+  $("#sum").innerHTML=MET.map(([n,c],k)=>`<div class="${c}"><b>${sum(all,k+1)}</b><span>${n}</span></div>`).join("");
+  $("#r1").innerHTML=v.s.slice(0,3).map(card).join("");
+  $("#r2").innerHTML=v.s.slice(3).map(card).join("");
+}
+
+$("#months").innerHTML=D.map(v=>`<button type="button" class="${v.k==="h"?"tot":""}${v.g?" gap":""}" aria-pressed="false">${v.l}</button>`).join("");
+document.querySelectorAll("#months button").forEach((b,i)=>b.addEventListener("click",()=>show(i)));
+document.addEventListener("keydown",e=>{
+  const cur=[...document.querySelectorAll("#months button")].findIndex(b=>b.getAttribute("aria-pressed")==="true");
+  if(e.key==="ArrowLeft"&&cur>0)show(cur-1);
+  if(e.key==="ArrowRight"&&cur<D.length-1)show(cur+1);
+});
+
+function fit(){
+  $("#stage").style.zoom=innerWidth/1920;
+}
+addEventListener("resize",fit);fit();
+show(D.map(v=>v.k).lastIndexOf("m"));
+</script>
+
+</body>
+</html>
